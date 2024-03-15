@@ -4,8 +4,8 @@ import { HiOutlineBars2 } from "react-icons/hi2";
 import logo from "../assets/halal.png"
 import { ProductsContext } from '../App';
 import { fetchDiscount } from '../Fetches/productFetching';
-const navlinkStyle = "py-2 lg:py-4 block group  hover:bg-red-500 lg:hover:bg-transparent rounded-md transition-all";
-const spanClass = "group-hover:text-white lg:group-hover:text-red-600 lg:group-hover:pl-0  group-hover:pl-5 transition-all"
+const navlinkStyle = "py-2 lg:py-4 block group  hover:bg-[#008eda] lg:hover:bg-transparent rounded-md transition-all";
+const spanClass = "group-hover:text-white lg:group-hover:text-[#008eda] lg:group-hover:pl-0  group-hover:pl-5 transition-all"
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [state, dispatch] = useContext(ProductsContext)
@@ -16,8 +16,9 @@ const Navbar = () => {
         <div className='lg:flex bg-white py-4 items-center justify-between main-container w-full'>
             <div className='flex items-center justify-between'>
                 <NavLink to={"/"}>
-                    <h1 className='text-3xl font-semibold'>
-                        <img className='w-16' src={logo} alt="" />
+                    <h1 className='text-3xl font-semibold text-[#008eda]'>
+                        {/* <img className='w-16' src={logo} alt="" /> */}
+                        Dorixona
                     </h1>
                 </NavLink>
                 <button onClick={() => setIsOpen(!isOpen)} className='lg:hidden '>
