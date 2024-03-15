@@ -78,7 +78,7 @@ const BookingModule = ({ setModal }) => {
                     <input onChange={(e) => inputHandler(e.target.name, e.target.value)} name='name' type="text" className='p-3 text-sm text-black' placeholder='F.I.O' />
                     <input onChange={(e) => inputHandler(e.target.name, +e.target.value)} name='number' type="number" className='p-3 text-sm text-black' placeholder='Telefon raqamingiz' />
                     <input onChange={(e) => inputHandler(e.target.name, e.target.value)} name='message' type="text" className='p-3 text-sm text-black' placeholder='Zakolatni kiriting' />
-                    <button disabled={!dataForm.name || !dataForm.number || !dataForm.message ? true : false} className='bg-green-500 disabled:opacity-25 disabled:cursor-not-allowed p-3 text-white rounded-md'>Submit</button>
+                    <button disabled={!dataForm.name || !dataForm.number || !dataForm.message ? true : false} className='bg-green-500 disabled:opacity-25 disabled:cursor-not-allowed p-3 text-white rounded-md'>Jo'natish</button>
                 </form>
             </div>
         </div>
