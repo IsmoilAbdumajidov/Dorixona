@@ -63,7 +63,7 @@ const Contact = () => {
                 </div>
                 <div className='col-span-1 p-3 border'>
                     <div className='flex flex-col sm:flex-row'>
-                        <h1 className='text-xl font-bold mb-3'>Contact detail</h1>
+                        <h1 className='text-xl font-bold mb-3'>Ma'lumotlaringizni kiriting</h1>
                         <div className='ms-auto me-5'>
                             {spin ? <SpinnerSmall /> : null}
                             <div className='flex gap-3 items-center'>
@@ -85,9 +85,9 @@ const Contact = () => {
                         </div>
                     </div>
                     <form onSubmit={sendDataForm} className='flex flex-col gap-4'>
-                        <input onChange={inputHandler} value={dataForm.name} type="text" name='name' className={inputStyle} placeholder="*Username..." />
-                        <input onChange={inputHandler} value={dataForm.email} type="email" name='email' className={inputStyle} placeholder="*Email..." />
-                        <textarea onChange={inputHandler} value={dataForm.message} className={inputStyle} name="message" placeholder="Message" ></textarea>
+                        <input onChange={inputHandler} value={dataForm.name} type="text" name='name' className={inputStyle} placeholder="*F.I.O..." />
+                        <input onChange={inputHandler} value={dataForm.email} type="number" name='email' className={inputStyle} placeholder="*Telefon raqamingizni kiriting..." />
+                        <textarea onChange={inputHandler} value={dataForm.message} className={inputStyle} name="message" placeholder="Komentariya" ></textarea>
                         <button disabled={!dataForm.name || !dataForm.email || !dataForm.message ? true : false} className='bg-black p-3 disabled:opacity-25 disabled:cursor-not-allowed text-white rounded-md'>Submit</button>
                     </form>
                 </div>

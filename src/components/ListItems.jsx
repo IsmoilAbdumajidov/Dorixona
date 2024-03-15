@@ -92,7 +92,7 @@ const ListItems = ({ list, remove }) => {
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row mt-auto gap-2">
-                  <button onClick={() => quantityHandler(true, item)} className="bg-green-500 gap-2 flex items-center justify-center  hover:bg-green-600 text-white rounded-md p-1 sm:py=2 flex-1">
+                  <button onClick={() => quantityHandler(true, item)} className="bg-green-500 gap-2 flex items-center justify-center  hover:bg-green-600 text-white rounded-md p-1 sm:py-2 flex-1">
                     <HiOutlineShoppingCart className="w-5 h-5" />
                     <span className="text-sm sm:text-base">Buyurtma berish</span>
                   </button>

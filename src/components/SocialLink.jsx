@@ -35,7 +35,7 @@ const SocialLink = () => {
         <ul className='flex gap-2'>
             {
                 getScoil.length ? getScoil.map((social,i)=>(
-                    <li key={i} className='w-10 h-10 rounded-full text-white flex items-center justify-center bg-red-500'>
+                    <li key={i} className='w-10 h-10 rounded-full text-white flex items-center justify-center bg-[#008eda]'>
                         <a href={social?.link}>
                             {social ? socialMedia[social?.social] : ""}
                         </a>

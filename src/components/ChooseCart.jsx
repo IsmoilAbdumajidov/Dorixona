@@ -79,7 +79,7 @@ const ChooseCart = () => {
                             <div className='mt-2 sm:flex gap-5 text-center'>
                                 <div className='flex sm:block gap-2 justify-between items-center'>
                                     <p className='text-gray-400 sm:mb-2 text-xs'>Narx</p>
-                                    <p className='text-green-500 font-semibold'>{Math.floor(card?.price).brm()} uzs</p>
+                                    <p className='text-green-500 font-semibold'>{Math.floor(card?.price).brm()} <span className='text-black'>uzs</span></p>
                                 </div>
                                 <div className='flex sm:block gap-2 justify-between items-center'>
                                     <p className='text-gray-400 sm:mb-2 text-xs'>Miqdor</p>
@@ -93,7 +93,7 @@ const ChooseCart = () => {
                                 </div>
                                 <div className='flex sm:block gap-2 justify-between items-center'>
                                     <p className='text-gray-400 sm:mb-2 text-xs'>Umumiy narx</p>
-                                    <p className='text-[#008eda] font-semibold'>{Math.floor(card?.price * card.count).brm()} uzs</p>
+                                    <p className='text-[#008eda] font-semibold'>{Math.floor(card?.price * card.count).brm()} <span className='text-black'>uzs</span></p>
                                 </div>
                             </div>
                             <div className='flex gap-3'>
