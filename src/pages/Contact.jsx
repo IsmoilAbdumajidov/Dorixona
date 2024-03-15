@@ -88,7 +88,7 @@ const Contact = () => {
                         <input onChange={inputHandler} value={dataForm.name} type="text" name='name' className={inputStyle} placeholder="*F.I.O..." />
                         <input onChange={inputHandler} value={dataForm.email} type="number" name='email' className={inputStyle} placeholder="*Telefon raqamingizni kiriting..." />
                         <textarea onChange={inputHandler} value={dataForm.message} className={inputStyle} name="message" placeholder="Komentariya" ></textarea>
-                        <button disabled={!dataForm.name || !dataForm.email || !dataForm.message ? true : false} className='bg-black p-3 disabled:opacity-25 disabled:cursor-not-allowed text-white rounded-md'>Submit</button>
+                        <button disabled={!dataForm.name || !dataForm.email || !dataForm.message ? true : false} className='bg-black p-3 disabled:opacity-25 disabled:cursor-not-allowed text-white rounded-md'>Jo'natish</button>
                     </form>
                 </div>
                 <div className='lg:col-span-2 p-3 border'>
