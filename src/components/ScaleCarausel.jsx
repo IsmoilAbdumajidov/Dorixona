@@ -9,7 +9,7 @@ import { ProductsContext } from '../App';
 import { Link } from 'react-router-dom';
 import Checked from './Checked';
 import { HiOutlineShoppingCart } from "react-icons/hi2";
-import { HiOutlineHeart } from "react-icons/hi2";
+import { IoDocumentTextOutline } from "react-icons/io5";
 import { GoTrash } from "react-icons/go";
 import Characteristic from './Characteristic';
 
@@ -48,9 +48,9 @@ const ScaleCarausel = ({ state }) => {
           <SwiperSlide key={i}>
             <div key={i} className="overflow-hidden mx-1 mb-1 flex flex-col  relative">
               <Link to={`/product/${item.slug}`} className="relative cursor-pointer h-[280px] sm:h-[300px] lg:h-[330px] ">
-                <div className="absolute bottom-0 left-0 rounded text-sm bg-green-500 text-white px-1">
+                {/* <div className="absolute bottom-0 left-0 rounded text-sm bg-green-500 text-white px-1">
                   {item?.type}
-                </div>
+                </div> */}
                 <img
                   className="w-full h-full aspect-square object-cover object-center"
                   src={item?.images[0]}
@@ -63,25 +63,16 @@ const ScaleCarausel = ({ state }) => {
                   {item?.name}
                 </Link>
                 <div>
-                  <p
-                    className={`${item?.discount !== 0 ? "inline" : "hidden"
-                      } text-gray-400 text-xs sm:text-sm  block`}
-                  >
-                    Discount:{" "}
-                    <span className="text-red-500 line-through font-semibold ml-3">
-                      <span>$</span>
-                      {(item?.discount).toFixed(2, 0)}
-                    </span>
-                  </p>
+                  
                   <p className="text-gray-400 text-xs sm:text-sm  block">
-                    Price:{" "}
+                    Narx:{" "}
                     <span className="text-green-500 text-sm sm:text-lg font-semibold ml-3">
-                      <span>$</span>
-                      {(item?.price).toFixed(2, 0)}
+                      {Math.floor(item?.price).brm()}
+                      <span className='text-black'> uzs</span>
                     </span>
                   </p>
                   <p className="text-gray-400 text-xs sm:text-sm  block">
-                    Category:{" "}
+                    Kategoriya:{" "}
                     <span className="text-slate-900 font-semibold ml-3">
                       {item?.category?.name}
                     </span>
@@ -90,11 +81,11 @@ const ScaleCarausel = ({ state }) => {
                 <div className="flex flex-col sm:flex-row mt-auto gap-2">
                   <button className="bg-green-500 gap-2 flex items-center justify-center  hover:bg-green-600 text-white rounded-md p-1 sm:py=2 flex-1">
                     <HiOutlineShoppingCart className="w-5 h-5" />
-                    <span className="text-sm sm:text-base">Buy</span>
+                    <span className="text-sm sm:text-base">Buyurtma berish</span>
                   </button>
                   <div className="flex gap-2">
-                    <button onClick={() => toggleHandler("wishlist", "UPDATE_WISHLIST", item)} className="bg-red-500 hover:bg-red-600 transition-all flex-1 flex items-center justify-center text-white rounded-md p-1 sm:p-2">
-                      <HiOutlineHeart className="w-5 h-5" />
+                    <button onClick={() => toggleHandler("wishlist", "UPDATE_WISHLIST", item)} className="bg-[#008eda] hover:bg-[#07b8fc] transition-all flex-1 flex items-center justify-center text-white rounded-md p-1 sm:p-2">
+                      <IoDocumentTextOutline className="w-5 h-5" />
                     </button>
                     <button onClick={() => toggleHandler("scale", "UPDATE_SCALE", item)} className="bg-black transition-all flex-1 flex items-center justify-center text-white rounded-md p-1 sm:p-2">
                     <GoTrash className="w-5 h-5" />

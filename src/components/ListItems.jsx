@@ -94,7 +94,7 @@ const ListItems = ({ list, remove }) => {
                 <div className="flex flex-col sm:flex-row mt-auto gap-2">
                   <button onClick={() => quantityHandler(true, item)} className="bg-green-500 gap-2 flex items-center justify-center  hover:bg-green-600 text-white rounded-md p-1 sm:py=2 flex-1">
                     <HiOutlineShoppingCart className="w-5 h-5" />
-                    <span className="text-sm sm:text-base">Sotib olish</span>
+                    <span className="text-sm sm:text-base">Buyurtma berish</span>
                   </button>
                   <div className="flex gap-2">
                     <button onClick={() => toggleHandler("wishlist", "UPDATE_WISHLIST", item)} className={`${remove==="wishlist" ? "bg-black" : "bg-[#008eda] hover:bg-[#07b8fc]"} transition-all flex-1 flex items-center justify-center text-white rounded-md p-1 sm:p-2`}>

@@ -51,7 +51,7 @@ const ModalForm = ({ setShowModal }) => {
             <div className='relative w-[500px] h-auto border p-6 bg-white rounded'>
                 <div className="my-4">
                     <div className='flex flex-col gap-2'>
-                        <h1 className='text-black text-lg font-medium'>Contact to Admin</h1>
+                        <h1 className='text-black text-lg font-medium'>Admin bilan bog'lanish</h1>
                         <div className='ms-auto me-5'>
                             {spin ? <SpinnerSmall /> : null}
                             <div className='flex gap-3 items-center'>
@@ -77,9 +77,9 @@ const ModalForm = ({ setShowModal }) => {
                     </button>
                 </div>
                 <form onSubmit={sendDataForm} className='flex flex-col gap-4'>
-                    <input onChange={(e) => inputHandler(e.target.name, e.target.value)} name='name' type="text" className='p-3 text-sm text-black' placeholder='First name' />
-                    <input onChange={(e) => inputHandler(e.target.name, +e.target.value)} name='number' type="number" className='p-3 text-sm text-black' placeholder='Phone number' />
-                    <textarea onChange={(e) => inputHandler(e.target.name, e.target.value)} name='message' className='p-3 text-sm text-black' placeholder='Message'></textarea>
+                    <input onChange={(e) => inputHandler(e.target.name, e.target.value)} name='name' type="text" className='p-3 text-sm text-black' placeholder='F.I.O' />
+                    <input onChange={(e) => inputHandler(e.target.name, +e.target.value)} name='number' type="number" className='p-3 text-sm text-black' placeholder='Telefon raqamingiz' />
+                    <textarea onChange={(e) => inputHandler(e.target.name, e.target.value)} name='message' className='p-3 text-sm text-black' placeholder='Xabaringiz'></textarea>
                     <button  disabled={!dataForm.name || !dataForm.number || !dataForm.message ? true : false} className='bg-green-500 disabled:opacity-25 disabled:cursor-not-allowed p-3 text-white rounded-md'>Submit</button>
                 </form>
             </div>
