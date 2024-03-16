@@ -12,7 +12,7 @@ const Characteristic = ({ itemData }) => {
                 <div key={i} className='border-b text-xs  sm:text-base h-[40px] p-2  even:bg-gray-200 odd:bg-white odd:border-s'>
                     {
                         itemData.characteristic[character[i]] ?
-                            itemData.characteristic[character[i]] :
+                            <span>{(+itemData.characteristic[character[i]]).brm()} uzs</span> :
                             <TfiMinus />
                     }
                 </div>

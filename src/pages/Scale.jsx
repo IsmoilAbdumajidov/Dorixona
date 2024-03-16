@@ -3,7 +3,7 @@ import ScaleCarausel from '../components/ScaleCarausel'
 import { ProductsContext } from '../App'
 
 const Scale = () => {
-  const character = ['Weight', 'Quantity', 'Meat type', 'Species', 'Expiration date', 'TU', 'Shell/container', 'Packaging', 'Curing temperature']
+  const character = ['Apteka "Dori-Darmon" AK (37)', 'Globus Sanoat Savdo', 'Apteka "MFS-Servis" DP type', 'Apteka "Davo"', 'Apteka "Tabletka"', 'Apteka "Novbahor Farma Line"', '"NeoDorixona"', '"ATM Partners"', '"Jurabek Laboratories"']
   const [state, _] = useContext(ProductsContext)
   return (
     <div className='min-h-screen mt-5'>
