@@ -74,22 +74,31 @@ const Cart = () => {
     return (
         <div className='min-h-screen'>
             {modal && <BookingModule setModal={setModal} />}
-            <div className="main-container grid grid-cols-1 xl:grid-cols-2 mt-10 items-start gap-8">
-                <div className='col-span-1 flex flex-col gap-8 max-h-[500px] overflow-y-scroll pe-2'>
-                    <ChooseCart />
-                </div>
-                <div className=''>
+            {state.cart.length ? (
+                <div className="main-container grid grid-cols-1 xl:grid-cols-2 mt-10 items-start gap-8">
+                    <div className='col-span-1 gap-3 flex flex-col  pe-2'>
+                        <div>
+                            <h1>Retsept:</h1>
+                        </div>
+                        <div className='gap-8 max-h-[500px] overflow-y-scroll'>
 
-                    <div className='col-span-1 flex flex-col gap-5 max-h-[500px] overflow-y-scroll pe-2'>
-                        <Firma title={"Rosinka (Novomoskovskaya filiali) Rosinka (Novomoskovskaya filiali)"} setModal={setModal} count={count} state={state} />
-                        <Firma title={"Bravo Pharm"} setModal={setModal} count={count} state={state} />
-                        <Firma title={"Globus"} setModal={setModal} count={count} state={state} />
-                        <Firma title={"Dori-Darmon АК (filial 60 Dori-Darmon АК"} setModal={setModal} count={count} state={state} />
-                        <Firma title={"Apteka '999'"} setModal={setModal} count={count} state={state} />
-                        <Firma title={"Eco Med"} setModal={setModal} count={count} state={state} />
+                            <ChooseCart />
+                        </div>
                     </div>
+                    <div className='flex flex-col gap-3'>
+                        <h1>Dorixonalar:</h1>
+                        <div className='col-span-1 flex flex-col gap-5 max-h-[500px] overflow-y-scroll pe-2'>
+                            <Firma num={"+998 91 234 76 89"} zakolat={10} title={"Rosinka (Novomoskovskaya filiali) Rosinka (Novomoskovskaya filiali)"} setModal={setModal} count={count} state={state} />
+                            <Firma num={"+998 93 765 85 21"} zakolat={5} title={"Bravo Pharm"} setModal={setModal} count={count} state={state} />
+                            <Firma num={"+998 99 477 65 18"} zakolat={0} title={"Globus"} setModal={setModal} count={count} state={state} />
+                            <Firma num={"+998 93 999 60 99"} zakolat={12} title={"Dori-Darmon АК (filial 60 Dori-Darmon АК"} setModal={setModal} count={count} state={state} />
+                            <Firma num={"+998 94 234 78 34"} zakolat={20} title={"Apteka '999'"} setModal={setModal} count={count} state={state} />
+                            <Firma num={"+998 90 386 65 74"} zakolat={7} title={"Eco Med"} setModal={setModal} count={count} state={state} />
+                        </div>
+                    </div>
+
                 </div>
-            </div>
+            ) : <p className='min-h-[500px] ps-10 pt-10'>Mahsulotlar topilmadi...</p>}
         </div>
     )
 }

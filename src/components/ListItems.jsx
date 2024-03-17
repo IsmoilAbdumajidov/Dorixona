@@ -112,7 +112,7 @@ const ListItems = ({ list, remove }) => {
             </div>
           ))
         ) : (
-          <p className="min-h-[500px] ps-10">No items...</p>
+          <p className="min-h-[500px] ps-10">Mahhsulot topilmadi...</p>
         )}
     </div>
   );

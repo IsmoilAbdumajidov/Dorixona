@@ -27,7 +27,7 @@ const Scale = () => {
                 <ScaleCarausel state={state} />
               </div>
             </div>
-          ) : <p className="min-h-[500px] ps-10">No items...</p>
+          ) : <p className="min-h-[500px] ps-10 pt-10">Mmahsulot topilmadi...</p>
       }
     </div>
   )

@@ -5,10 +5,11 @@ import { toast } from 'react-toastify';
 import SpinnerSmall from './spinerSmall/SpinnerSmall';
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 import { MdErrorOutline } from "react-icons/md";
+import click from "../imgs/click.png"
+import payme from "../imgs/payme.png"
 const initialValue = {
     name: "",
     number: "",
-    message: "",
 }
 const BookingModule = ({ setModal }) => {
     const [dataForm, setDataForm] = useState(initialValue)
@@ -77,8 +78,12 @@ const BookingModule = ({ setModal }) => {
                 <form onSubmit={sendDataForm} className='flex flex-col gap-4'>
                     <input onChange={(e) => inputHandler(e.target.name, e.target.value)} name='name' type="text" className='p-3 text-sm text-black' placeholder='F.I.O' />
                     <input onChange={(e) => inputHandler(e.target.name, +e.target.value)} name='number' type="number" className='p-3 text-sm text-black' placeholder='Telefon raqamingiz' />
-                    <input onChange={(e) => inputHandler(e.target.name, e.target.value)} name='message' type="text" className='p-3 text-sm text-black' placeholder='Zakolatni kiriting' />
-                    <button disabled={!dataForm.name || !dataForm.number || !dataForm.message ? true : false} className='bg-green-500 disabled:opacity-25 disabled:cursor-not-allowed p-3 text-white rounded-md'>Jo'natish</button>
+                    <h4>Tolov turi:</h4>
+                    <div className='flex items-center justify-center gap-10'>
+                        <a href="#"> <img className='w-10' src={click} alt="" /></a>
+                        <a href="#"><img className='w-10' src={payme} alt="" /></a>
+                    </div>
+                    <button disabled={!dataForm.name || !dataForm.number ? true : false} className='bg-green-500 disabled:opacity-25 disabled:cursor-not-allowed p-3 text-white rounded-md'>Jo'natish</button>
                 </form>
             </div>
         </div>

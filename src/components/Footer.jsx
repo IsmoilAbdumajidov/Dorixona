@@ -41,7 +41,7 @@ const Footer = () => {
               <Link to={"/"} className='hover:text-red-500'>Asosiy sahifa</Link>
             </li>
             <li>
-              <Link to={"/about"} className='hover:text-red-500'>Sayt haqida</Link>
+              {/* <Link to={"/about"} className='hover:text-red-500'>Sayt haqida</Link> */}
             </li>
             <li>
               <Link to={"/contact"} className='hover:text-red-500'>Bog'lanish</Link>

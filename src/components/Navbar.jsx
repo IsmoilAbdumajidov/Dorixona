@@ -6,6 +6,7 @@ import { ProductsContext } from '../App';
 import { fetchDiscount } from '../Fetches/productFetching';
 const navlinkStyle = "py-2 lg:py-4 block group  hover:bg-[#008eda] lg:hover:bg-transparent rounded-md transition-all";
 const spanClass = "group-hover:text-white lg:group-hover:text-[#008eda] lg:group-hover:pl-0  group-hover:pl-5 transition-all"
+// import pdf from "../imgs/Farmoseft.pptx"
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [state, dispatch] = useContext(ProductsContext)
@@ -28,7 +29,7 @@ const Navbar = () => {
             <div className={`${isOpen ? "h-auto" : "h-0"} lg:flex lg:h-auto overflow-hidden`}>
                 <ul className='lg:flex items-center lg:ml-20 lg:gap-6 mt-5 lg:mt-0 text-[15px]'>
                     <NavLink to={'/'} className={navlinkStyle}><span className={spanClass}>Asosiy sahifa</span></NavLink>
-                    <NavLink to={'/about'} className={navlinkStyle}><span className={spanClass}>Sayt haqida</span></NavLink>
+                    {/* <a href={pdf}><span className={spanClass}>Sayt haqida</span></a> */}
                     {/* {state.discount.length ? <NavLink to={'/discount'} className={navlinkStyle}><span className={spanClass}>Discount</span></NavLink> : ""} */}
                     <NavLink to={'/contact'} className={navlinkStyle}><span className={spanClass}>Bog'lanish</span></NavLink>
                 </ul>

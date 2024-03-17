@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Firma = ({ title,setModal,count,state }) => {
+const Firma = ({ title,setModal,count,state,zakolat,num }) => {
     return (
         <div className="flex flex-col gap-4  col-span-1 ">
             <div className='flex flex-col rounded-md  px-3 pt-4 pb-3 lg:px-6 border'>
@@ -14,12 +14,12 @@ const Firma = ({ title,setModal,count,state }) => {
                     </div>
                     <div>
                         <p className='text-[13px] text-gray-500'>Zakolat:</p>
-                        <p>12%</p>
+                        <p>{zakolat}%</p>
                         {/* <p>{(Math.floor(state.allPrice/100*12/1000)*1000).brm()}</p> */}
                     </div>
                     <div className=' font-bold'>
                         <div>Jami:</div>
-                        <div className='text-lg text-red-500'>{(Math.floor(state.allPrice / 1000) * 1000).brm()}<span className='text-black font-semibold'> uzs</span></div>
+                        <div className='text-lg text-red-500'>{(Math.floor(state.allPrice / 1000) * 1000 + 1000*zakolat).brm()}<span className='text-black font-semibold'> uzs</span></div>
                     </div>
                 </div>
                 <div className='flex flex-col sm:flex-row justify-between items-center'>
@@ -29,7 +29,7 @@ const Firma = ({ title,setModal,count,state }) => {
                     </div>
                     <div>
                         <p className='text-[13px] text-gray-500'>Telefon:</p>
-                        <p>+99899 477 65 18</p>
+                        <p>{num}</p>
                     </div>
                     <button onClick={() => setModal(true)} className="bg-green-500 gap-2 text-[13px]  hover:bg-green-600 text-white rounded-md py-2   px-3  ">
                         Buyurtma berish

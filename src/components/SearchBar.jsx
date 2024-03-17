@@ -75,10 +75,10 @@ const SearchBar = () => {
                         <RiCustomerServiceLine className='w-9 h-9' />
                         <span>Murojaat qilish</span>
                     </div>
-                    <Link to={"/"} className='flex cursor-pointer flex-col items-center relative text-[12px]'>
+                    {/* <Link to={"/"} className='flex cursor-pointer flex-col items-center relative text-[12px]'>
                         <AiOutlineHome className='w-9 h-9' />
                         <span>Asosiy sahifa</span>
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
         </div>
