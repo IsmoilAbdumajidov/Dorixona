@@ -1,15 +1,17 @@
 import React, { useContext, useEffect, useState } from 'react'
 import ChooseCart from '../components/ChooseCart'
 import { ProductsContext } from '../App'
-import SpinnerSmall from '../components/spinerSmall/SpinnerSmall'
-import { IoCheckmarkDoneOutline } from "react-icons/io5";
-import { HiOutlineShoppingCart } from "react-icons/hi2";
-import { MdErrorOutline } from "react-icons/md";
+// import SpinnerSmall from '../components/spinerSmall/SpinnerSmall'
+// import { IoCheckmarkDoneOutline } from "react-icons/io5";
+// import { HiOutlineShoppingCart } from "react-icons/hi2";
+// import { MdErrorOutline } from "react-icons/md";
 import { toast } from 'react-toastify';
 import { instance } from '../api/Api';
 import Cookies from 'js-cookie';
 import BookingModule from '../components/BookingModule';
 import Firma from '../components/Firma';
+import parse from 'html-react-parser';
+
 
 const initialValue = {
     name: "",
@@ -96,7 +98,11 @@ const Cart = () => {
                             <Firma num={"+998 90 386 65 74"} zakolat={7} title={"Eco Med"} setModal={setModal} count={count} state={state} />
                         </div>
                     </div>
-
+                    <div className="col-span-2">
+                        <div className='lg:col-span-2 p-3 border'>
+                            {parse(state?.contact[0] ? state.contact[0]?.location : "")}
+                        </div>
+                    </div>
                 </div>
             ) : <p className='min-h-[500px] ps-10 pt-10'>Mahsulotlar topilmadi...</p>}
         </div>
